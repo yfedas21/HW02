@@ -55,19 +55,24 @@ public:
 private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
+	private:
+		string name; // THE name of the individual represented in the entry
+		string number; // THE phone number for this individual
 	public:
 		Directory_Entry() {} // Default no-argument constructor
+		// CREATES a new Directory_Entry with the specified name and number
 		Directory_Entry(std::string the_name, std::string the_number) {
-			// constructor not implemented yet
+			this->name = the_name; // INITIALIZE the constructor
+			this->number = the_number; // SET parameter values to member variables
 		}
 		std::string get_name() const {
-			return ""; // method not implemented yet
+			return this->name; // RETRIEVES the name
 		}
 		std::string get_number() const {
-			return ""; // method not implemented yet
+			return this->number; // RETRIEVES the number
 		}
 		void set_number(const std::string& new_number) {
-			// method not immplemented yet
+			this->number = new_number; // SETS the number to the specified value
 		}
 	private:
 
